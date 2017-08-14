@@ -1,6 +1,4 @@
 // ==UserScript==
-// @include http://libanswers.utsa.edu/record.php
-// ==/UserScript==
 
 document.getElementById('qpreselect').addEventListener('click', choiceListener);
 
