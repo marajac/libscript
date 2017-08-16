@@ -3,7 +3,7 @@
 
 var qbox = document.getElementById('qpreselect');
 var qboxValue = qbox.value;
-var f1 = document.getElementById('f1').value;
+var f1 = document.getElementById('f1');
 var f2 = document.getElementById('f2').value;
 var f3 = document.getElementById('f3').value;
 var f4 = document.getElementById('f4').value;
@@ -15,7 +15,7 @@ function choiceListener() {
     if(qboxValue == 27251 || qboxValue == 27252 || qboxValue == 27249 || qboxValue == 27250 || 
       qboxValue == 27253)
     {
-    	f1 = 2;
+    	f1.value = 2;
     	f2 = 1;
     	f3 = 1;
     	f4 = 1;
