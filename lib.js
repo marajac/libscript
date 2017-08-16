@@ -4,6 +4,7 @@
 var qbox = document.getElementById('qpreselect');
 var qboxValue;
 
+createOptions();
 qbox.addEventListener('click', choiceListener);
 
 function choiceListener() {
@@ -27,3 +28,17 @@ function setFields(f1, f2, f3, f4) {
     document.getElementById('f3').value = f3;
     document.getElementById('f4').value = f4;
 }
+
+//generate new options
+Function createOptions(){
+    var fs = require("fs"); 
+    fs.readFile("./options.txt", function(text){ var textByLine = text.split("\n") });
+    var x = document.getElementById('qpreselect');
+    for(i=0; i < textByLine.length; i++){
+        var option = document.createElement('option');
+        option.text = textByLine[i];
+        option.value = i+1;
+        x.appendChild(option);
+    }
+}
+
