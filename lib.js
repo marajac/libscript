@@ -12,7 +12,8 @@ qbox.addEventListener('click', choiceListener);
 
 function choiceListener() {
     //laptop/GIFM/Dibs/other tech
-    if(qboxValue == 26292 || qboxValue == 26293 || qboxValue == 26294 || qboxValue == 26295)
+    if(qboxValue == 27251 || qboxValue == 27252 || qboxValue == 27249 || qboxValue == 27250 || 
+      qboxValue == 27253)
     {
     	f1 = 2;
     	f2 = 1;
@@ -20,7 +21,7 @@ function choiceListener() {
     	f4 = 1;
     }
     //course reserve
-    if(qboxValue == 26291)
+    if(qboxValue == 27248)
     {
     	f1 = 1;
     	f2 = 1;
