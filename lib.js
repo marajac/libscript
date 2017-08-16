@@ -31,8 +31,9 @@ function setFields(f1, f2, f3, f4) {
 
 //generate new options
 function createOptions(){
-    var fs = require("fs"); 
-    fs.readFile("./options.txt", function(text){ var textByLine = text.split("\n") });
+    
+    //TODO: parse text file into array
+    
     var x = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length; i++){
         var option = document.createElement('option');
