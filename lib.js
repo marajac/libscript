@@ -33,7 +33,14 @@ function setFields(f1, f2, f3, f4) {
 function createOptions(){
     
     //TODO: parse text file into array
+    var client = new XMLHttpRequest();
+    client.open('GET', 'https://marajac.github.io/libscript/options.txt');
+    client.onreadystatechange = function() {
+        alert(client.responseText);
+    }
+    client.send();
     
+    var textByLine = client.split('\n');
     var x = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length; i++){
         var option = document.createElement('option');
