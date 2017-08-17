@@ -68,7 +68,7 @@ function choiceListener() {
         qboxValue = 0;
     }
     //Phone Reserve
-    if(qboxValue == 6)
+    if(qboxValue == 8)
     {
         setPreDef();
     	setFields(1, 2, 1, 1);
