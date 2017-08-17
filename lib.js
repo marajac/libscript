@@ -38,9 +38,9 @@ function createOptions(){
     client.onreadystatechange = function() {
         alert(client.responseText);
     }
-    client.send();
-    
     var textByLine = client.responseText.split('\n');
+    client.send();
+   
     var x = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length; i++){
         var option = document.createElement('option');
