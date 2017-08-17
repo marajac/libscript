@@ -41,7 +41,7 @@ function createOptions(){
     client.send();
     
     textByLine = client.responseText.split('\n');
-    x = document.getElementById('qpreselect');
+    qcombo = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length; i++){
         option = document.createElement('option');
         option.text = textByLine[i];
