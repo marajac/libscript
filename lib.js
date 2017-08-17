@@ -8,8 +8,10 @@ var qboxValue, text, client, qcombo, option, textByLine;
 client = new XMLHttpRequest();
 client.open('GET', 'https://marajac.github.io/libscript/options.txt');
 client.onreadystatechange = function() {
-    text = client.responseText.split('\n');
-    createOptions(text);
+    if (client.readyState == 4 && client.status == 200){
+        text = client.responseText.split('\n');
+        createOptions(text);
+    }
 }
 client.send();
 
