@@ -64,7 +64,7 @@ function choiceListener() {
     if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Directional";
-    	setFields(1, 2, 1, 1);
+    	setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
