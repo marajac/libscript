@@ -42,7 +42,7 @@ function createOptions(){
     
     textByLine = client.responseText.split('\n');
     qcombo = document.getElementById('qpreselect');
-    for(i=0; i < textByLine.length; i++){
+    for(i=0; i < textByLine.length-1; i++){
         option = document.createElement('option');
         option.text = textByLine[i];
         option.value = i+1;
