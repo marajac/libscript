@@ -35,9 +35,9 @@ function createOptions(){
     //TODO: parse text file into array
     var client = new XMLHttpRequest();
     client.open('GET', 'https://marajac.github.io/libscript/options.txt');
-    client.onreadystatechange = function() {
+    /*client.onreadystatechange = function() {
         alert(client.responseText);
-    }
+    }*/
     var textByLine = client.responseText.split('\n');
     client.send();
    
