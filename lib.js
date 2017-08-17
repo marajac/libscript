@@ -4,6 +4,7 @@
 var qbox = document.getElementById('qpreselect');
 var qboxValue, client, qcombo, option, textByLine;
 
+getText();
 createOptions();
 qbox.addEventListener('click', choiceListener);
 
@@ -29,17 +30,18 @@ function setFields(f1, f2, f3, f4) {
     document.getElementById('f4').value = f4;
 }
 
-//generate new options
-function createOptions(){
-    
-    //TODO: parse text file into array
+function getText(){
     client = new XMLHttpRequest();
     client.open('GET', 'https://marajac.github.io/libscript/options.txt');
     /*client.onreadystatechange = function() {
         alert(client.responseText);
     }*/
     client.send();
-    
+}
+
+//generate new options
+function createOptions(){
+    //TODO: parse text file into array  
     textByLine = client.responseText.split('\n');
     qcombo = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length-1; i++){
