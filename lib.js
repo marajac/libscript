@@ -9,10 +9,10 @@ client = new XMLHttpRequest();
 client.open('GET', 'https://marajac.github.io/libscript/options.txt');
 client.onreadystatechange = function() {
     text = client.responseText.split('\n');
+    createOptions(text);
 }
 client.send();
 
-createOptions(text);
 qbox.addEventListener('click', choiceListener);
 
 function choiceListener() {
