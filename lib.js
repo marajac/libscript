@@ -26,9 +26,53 @@ function choiceListener() {
     	setFields(2, 1, 1, 1);
     }
     //course reserve
-    if(qboxValue == 27248)
+    else if(qboxValue == 27248)
     {
     	setFields(1, 1, 1, 1);
+    }
+    //First Floor
+    //Directional
+    else if(qboxValue == 2)
+    {
+        setPreDef();
+    	setFields(2, 1, 2, 1);
+        qboxValue = 0;
+    }
+    //Second Floor
+    //Directional
+    else if(qboxValue == 4)
+    {
+        setPreDef();
+    	setFields(2, 1, 1, 1);
+        qboxValue = 0;
+    }
+    //Stacks Transaction
+    else if(qboxValue == 5)
+    {
+        setPreDef();
+    	setFields(2, 1, 1, 1);
+        qboxValue = 0;
+    }
+    //Difficult Reserve
+    if(qboxValue == 6)
+    {
+        setPreDef();
+    	setFields(1, 1, 1, 2);
+        qboxValue = 0;
+    }
+    //Phone Directional
+    if(qboxValue == 7)
+    {
+        setPreDef();
+    	setFields(1, 2, 1, 1);
+        qboxValue = 0;
+    }
+    //Phone Reserve
+    if(qboxValue == 6)
+    {
+        setPreDef();
+    	setFields(1, 2, 1, 1);
+        qboxValue = 0;
     }
 }
 
