@@ -40,7 +40,7 @@ function createOptions(){
     }
     client.send();
     
-    var textByLine = client.split('\n');
+    var textByLine = client.responseText.split('\n');
     var x = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length; i++){
         var option = document.createElement('option');
