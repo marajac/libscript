@@ -2,9 +2,17 @@
 //@include http://libanswers.utsa.edu/record.php*
 
 var qbox = document.getElementById('qpreselect');
-var qboxValue, client, qcombo, option, textByLine;
+var qboxValue, text, client, qcombo, option, textByLine;
 
-createOptions();
+
+client = new XMLHttpRequest();
+client.open('GET', 'https://marajac.github.io/libscript/options.txt');
+client.onreadystatechange = function() {
+    text = client.responseText.split('\n');
+}
+client.send();
+
+createOptions(text);
 qbox.addEventListener('click', choiceListener);
 
 function choiceListener() {
@@ -30,15 +38,8 @@ function setFields(f1, f2, f3, f4) {
 }
 
 //generate new options
-function createOptions(){
-    //TODO: parse text file into array  
-    client = new XMLHttpRequest();
-    client.open('GET', 'https://marajac.github.io/libscript/options.txt');
-    client.onreadystatechange = function() {
-        textByLine = client.responseText.split('\n');
-    }
-    client.send();
-    
+function createOptions(textByLine){
+    //TODO: parse text file into array    
     qcombo = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length-1; i++){
         option = document.createElement('option');
