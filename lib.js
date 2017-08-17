@@ -34,7 +34,7 @@ function choiceListener() {
     //Directional
     else if(qboxValue == 2)
     {
-        setPreDef();
+        showPreDef();
     	setFields(2, 1, 2, 1);
         qboxValue = 0;
     }
@@ -42,35 +42,35 @@ function choiceListener() {
     //Directional
     else if(qboxValue == 4)
     {
-        setPreDef();
+        showPreDef();
     	setFields(2, 1, 1, 1);
         qboxValue = 0;
     }
     //Stacks Transaction
     else if(qboxValue == 5)
     {
-        setPreDef();
+        showPreDef();
     	setFields(2, 1, 1, 1);
         qboxValue = 0;
     }
     //Difficult Reserve
     if(qboxValue == 6)
     {
-        setPreDef();
+        showPreDef();
     	setFields(1, 1, 1, 2);
         qboxValue = 0;
     }
     //Phone Directional
     if(qboxValue == 7)
     {
-        setPreDef();
+        showPreDef();
     	setFields(1, 2, 1, 1);
         qboxValue = 0;
     }
     //Phone Reserve
     if(qboxValue == 8)
     {
-        setPreDef();
+        showPreDef();
     	setFields(1, 2, 1, 1);
         qboxValue = 0;
     }
