@@ -34,45 +34,45 @@ function choiceListener() {
     //Directional
     else if(qboxValue == 2)
     {
-        showPreDef();
+        document.getElementById('q').value = "Directional";
     	setFields(2, 1, 2, 1);
-        qboxValue = 0;
+        swapFields();
     }
     //Second Floor
     //Directional
     else if(qboxValue == 4)
     {
-        showPreDef();
+        document.getElementById('q').value = "Directional";
     	setFields(2, 1, 1, 1);
-        qboxValue = 0;
+        swapFields();
     }
     //Stacks Transaction
     else if(qboxValue == 5)
     {
-        showPreDef();
+        document.getElementById('q').value = "Stacks Transaction";
     	setFields(2, 1, 1, 1);
-        qboxValue = 0;
+        swapFields();
     }
     //Difficult Reserve
     if(qboxValue == 6)
     {
-        showPreDef();
+        document.getElementById('q').value = "Difficult Reserve";
     	setFields(1, 1, 1, 2);
-        qboxValue = 0;
+        swapFields();
     }
     //Phone Directional
     if(qboxValue == 7)
     {
-        showPreDef();
+        document.getElementById('q').value = "Phone Directional";
     	setFields(1, 2, 1, 1);
-        qboxValue = 0;
+        swapFields();
     }
     //Phone Reserve
     if(qboxValue == 8)
     {
-        showPreDef();
+        document.getElementById('q').value = "Phone Reserve";
     	setFields(1, 2, 1, 1);
-        qboxValue = 0;
+        swapFields();
     }
 }
 
@@ -95,3 +95,7 @@ function createOptions(textByLine){
     }
 }
 
+function swapFields(){
+    showPreDef();
+    document.getElementById('qpreselect').value = 0;
+}
