@@ -84,8 +84,7 @@ function setFields(f1, f2, f3, f4) {
 }
 
 //generate new options
-function createOptions(textByLine){
-    //TODO: parse text file into array    
+function createOptions(textByLine){  
     qcombo = document.getElementById('qpreselect');
     for(i=0; i < textByLine.length-1; i++){
         option = document.createElement('option');
