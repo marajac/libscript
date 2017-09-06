@@ -1,5 +1,6 @@
 // ==UserScript==
 //@include http://libanswers.utsa.edu/record.php*
+//@author Marcus Jackson
 
 //TODO: Refactor for cleanliness
 
@@ -32,48 +33,55 @@ function choiceListener() {
     {
     	setFields(1, 1, 1, 1);
     }
-    //First Floor
-    //Directional
+    //Second Floor
+    //Reference
     else if(qboxValue == 2)
     {
-        document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 2, 1);
+        document.getElementById('q').value = "Reference";
+    	  setFields(1, 1, 1, 1);
         swapFields();
     }
-    //Second Floor
     //Directional
-    else if(qboxValue == 4)
+    else if(qboxValue == 3)
     {
         document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 1, 1);
+    	  setFields(2, 1, 1, 1);
         swapFields();
     }
     //Stacks Transaction
-    else if(qboxValue == 5)
+    else if(qboxValue == 4)
     {
         document.getElementById('q').value = "Stacks Transaction";
-    	setFields(2, 1, 1, 1);
+    	  setFields(2, 1, 1, 1);
         swapFields();
     }
     //Difficult Reserve
-    if(qboxValue == 6)
+    if(qboxValue == 5)
     {
         document.getElementById('q').value = "Difficult Reserve";
-    	setFields(1, 1, 1, 2);
+    	  setFields(1, 1, 1, 2);
         swapFields();
     }
     //Phone Directional
-    if(qboxValue == 7)
+    if(qboxValue == 6)
     {
         document.getElementById('q').value = "Phone Directional";
-    	setFields(2, 2, 1, 1);
+    	  setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
-    if(qboxValue == 8)
+    if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Reserve";
-    	setFields(1, 2, 1, 1);
+    	  setFields(1, 2, 1, 1);
+        swapFields();
+    }
+    //First Floor
+    //Directional
+    else if(qboxValue == 9)
+    {
+        document.getElementById('q').value = "Directional";
+    	  setFields(2, 1, 2, 1);
         swapFields();
     }
 }
