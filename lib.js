@@ -93,7 +93,7 @@ function setFields(f1, f2, f3, f4) {
 //generate new options
 function createOptions(textByLine){  
     qcombo = document.getElementById('qpreselect');
-    for(i=0; i < textByLine.length; i++){
+    for(i=0; i < textByLine.length-1; i++){
         option = document.createElement('option');
         option.text = textByLine[i];
         option.value = i+1;
