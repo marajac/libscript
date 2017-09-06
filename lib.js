@@ -1,12 +1,15 @@
 // ==UserScript==
 //@include http://libanswers.utsa.edu/record.php*
+//@author Marcus Jackson
+
+//TODO: Refactor for cleanliness
 
 var qbox = document.getElementById('qpreselect');
 var qboxValue, text, client, qcombo, option, textByLine;
 
 
 client = new XMLHttpRequest();
-client.open('GET', 'https://rawgit.com/marajac/libscript/testing/options.txt');
+client.open('GET', 'https://marajac.github.io/libscript/options.txt');
 client.onreadystatechange = function() {
     if (client.readyState == 4 && client.status == 200){
         text = client.responseText.split('\n');
@@ -35,42 +38,42 @@ function choiceListener() {
     else if(qboxValue == 2)
     {
         document.getElementById('q').value = "Reference";
-    	setFields(1, 1, 1, 1);
+    	  setFields(1, 1, 1, 1);
         swapFields();
     }
     //Directional
     else if(qboxValue == 3)
     {
         document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 1, 1);
+    	  setFields(2, 1, 1, 1);
         swapFields();
     }
     //Stacks Transaction
     else if(qboxValue == 4)
     {
         document.getElementById('q').value = "Stacks Transaction";
-    	setFields(2, 1, 1, 1);
+    	  setFields(2, 1, 1, 1);
         swapFields();
     }
     //Difficult Reserve
     if(qboxValue == 5)
     {
         document.getElementById('q').value = "Difficult Reserve";
-    	setFields(1, 1, 1, 2);
+    	  setFields(1, 1, 1, 2);
         swapFields();
     }
     //Phone Directional
     if(qboxValue == 6)
     {
         document.getElementById('q').value = "Phone Directional";
-    	setFields(2, 2, 1, 1);
+    	  setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
     if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Reserve";
-    	setFields(1, 2, 1, 1);
+    	  setFields(1, 2, 1, 1);
         swapFields();
     }
     //First Floor
@@ -78,7 +81,7 @@ function choiceListener() {
     else if(qboxValue == 9)
     {
         document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 2, 1);
+    	  setFields(2, 1, 2, 1);
         swapFields();
     }
 }
