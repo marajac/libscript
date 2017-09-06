@@ -31,36 +31,43 @@ function choiceListener() {
     	setFields(1, 1, 1, 1);
     }
     //Second Floor
-    //Directional
+    //Reference
     else if(qboxValue == 2)
+    {
+        document.getElementById('q').value = "Reference";
+    	setFields(1, 1, 1, 1);
+        swapFields();
+    }
+    //Directional
+    else if(qboxValue == 3)
     {
         document.getElementById('q').value = "Directional";
     	setFields(2, 1, 1, 1);
         swapFields();
     }
     //Stacks Transaction
-    else if(qboxValue == 3)
+    else if(qboxValue == 4)
     {
         document.getElementById('q').value = "Stacks Transaction";
     	setFields(2, 1, 1, 1);
         swapFields();
     }
     //Difficult Reserve
-    if(qboxValue == 4)
+    if(qboxValue == 5)
     {
         document.getElementById('q').value = "Difficult Reserve";
     	setFields(1, 1, 1, 2);
         swapFields();
     }
     //Phone Directional
-    if(qboxValue == 5)
+    if(qboxValue == 6)
     {
         document.getElementById('q').value = "Phone Directional";
     	setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
-    if(qboxValue == 6)
+    if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Reserve";
     	setFields(1, 2, 1, 1);
@@ -68,7 +75,7 @@ function choiceListener() {
     }
     //First Floor
     //Directional
-    else if(qboxValue == 8)
+    else if(qboxValue == 9)
     {
         document.getElementById('q').value = "Directional";
     	setFields(2, 1, 2, 1);
@@ -86,7 +93,7 @@ function setFields(f1, f2, f3, f4) {
 //generate new options
 function createOptions(textByLine){  
     qcombo = document.getElementById('qpreselect');
-    for(i=0; i < textByLine.length-1; i++){
+    for(i=0; i < textByLine.length; i++){
         option = document.createElement('option');
         option.text = textByLine[i];
         option.value = i+1;
