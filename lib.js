@@ -56,7 +56,7 @@ function choiceListener() {
         swapFields();
     }
     //Multimedia
-    else if(qboxValue == 4)
+    else if(qboxValue == 5)
     {
         document.getElementById('q').value = "Multimedia (CD/DVD/etc.)";
     	setFields(2, 1, 1, 1);
