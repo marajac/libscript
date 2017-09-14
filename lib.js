@@ -33,75 +33,61 @@ function createOptions(optionsList){
 }
 
 function choiceListener() {
-    var qboxValue = qbox.value;
-    //course reserve
-    if(qboxValue == 27248)
-    {
-    	setFields(1, 1, 1, 1);
-    }
-    //laptop/GIFM/Dibs/other tech
-    else if(qboxValue == 27251 || qboxValue == 27252 || qboxValue == 27249 || 
-       qboxValue == 27250 || qboxValue == 27253)
-    {
-    	setFields(2, 1, 1, 1);
-    }
-    //Second Floor
-    //Reference
-    else if(qboxValue == 2)
-    {
-        document.getElementById('q').value = "Reference";
-        setFields(1, 1, 1, 1);
-        swapFields();
-    }
-    //Directional
-    else if(qboxValue == 3)
-    {
-        document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 1, 1);
-        swapFields();
-    }
-    //Stacks Transaction
-    else if(qboxValue == 4)
-    {
-        document.getElementById('q').value = "Stacks Transaction";
-    	setFields(2, 1, 1, 1);
-        swapFields();
-    }
-    //Multimedia
-    else if(qboxValue == 5)
-    {
-        document.getElementById('q').value = "Multimedia (CD/DVD/etc.)";
-    	setFields(2, 1, 1, 1);
-        swapFields();
-    }
-    //Difficult Reserve
-    if(qboxValue == 6)
-    {
-        document.getElementById('q').value = "Difficult Reserve";
-    	setFields(1, 1, 1, 2);
-        swapFields();
-    }
-    //Phone Directional
-    if(qboxValue == 7)
-    {
-        document.getElementById('q').value = "Phone Directional";
-    	setFields(2, 2, 1, 1);
-        swapFields();
-    }
-    //Phone Reserve
-    if(qboxValue == 8)
-    {
-        document.getElementById('q').value = "Phone Reserve";
-    	setFields(1, 2, 1, 1);
-        swapFields();
-    }
-    //First Floor
-    //Directional
-    else if(qboxValue == 10)
-    {
-        document.getElementById('q').value = "Directional";
-    	setFields(2, 1, 2, 1);
-        swapFields();
+    switch(qbox.value){
+        //course reserve
+        case 27248:
+            setFields(1, 1, 1, 1);
+            break;
+        //laptop/GIFM/Dibs/other tech       
+        case 27249:
+        case 27250:
+        case 27251: 
+        case 27252:
+        case 27253:
+            setFields(2, 1, 1, 1);
+            break;
+        //Second Floor options
+        case 2:
+            document.getElementById('q').value = "Reference";
+            setFields(1, 1, 1, 1);
+            swapFields();
+            break;
+        case 3:
+            document.getElementById('q').value = "Directional";
+            setFields(2, 1, 1, 1);
+            swapFields();
+            break;
+        case 4:
+            document.getElementById('q').value = "Stacks Transaction";
+            setFields(2, 1, 1, 1);
+            swapFields();
+            break;
+        case 5:
+            document.getElementById('q').value = "Multimedia (CD/DVD/etc.)";
+            setFields(2, 1, 1, 1);
+            swapFields();
+            break;
+        case 6:
+            document.getElementById('q').value = "Difficult Reserve";
+            setFields(1, 1, 1, 2);
+            swapFields();
+            break;
+        case 7:
+            document.getElementById('q').value = "Phone Directional";
+            setFields(2, 2, 1, 1);
+            swapFields();
+            break;
+        case 8:
+            document.getElementById('q').value = "Phone Reserve";
+            setFields(1, 2, 1, 1);
+            swapFields();
+            break;
+        //First Floor options
+        case 10:
+            document.getElementById('q').value = "Directional";
+            setFields(2, 1, 2, 1);
+            swapFields();
+            break;
     }
 }
 
