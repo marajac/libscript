@@ -50,7 +50,7 @@ function choiceListener() {
     else if(qboxValue == 2)
     {
         document.getElementById('q').value = "Reference";
-    	setFields(1, 1, 1, 1);
+        setFields(1, 1, 1, 1);
         swapFields();
     }
     //Directional
@@ -67,22 +67,29 @@ function choiceListener() {
     	setFields(2, 1, 1, 1);
         swapFields();
     }
-    //Difficult Reserve
+    //Multimedia
     else if(qboxValue == 5)
+    {
+        document.getElementById('q').value = "Multimedia (CD/DVD/etc.)";
+    	setFields(2, 1, 1, 1);
+        swapFields();
+    }
+    //Difficult Reserve
+    if(qboxValue == 6)
     {
         document.getElementById('q').value = "Difficult Reserve";
     	setFields(1, 1, 1, 2);
         swapFields();
     }
     //Phone Directional
-    else if(qboxValue == 6)
+    if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Directional";
     	setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
-    else if(qboxValue == 7)
+    if(qboxValue == 8)
     {
         document.getElementById('q').value = "Phone Reserve";
     	setFields(1, 2, 1, 1);
@@ -90,7 +97,7 @@ function choiceListener() {
     }
     //First Floor
     //Directional
-    else if(qboxValue == 9)
+    else if(qboxValue == 10)
     {
         document.getElementById('q').value = "Directional";
     	setFields(2, 1, 2, 1);
