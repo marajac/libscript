@@ -4,9 +4,7 @@
 
 //TODO: Refactor for cleanliness
 
-var qbox = document.getElementById('qpreselect');
-var qboxValue, text, client, qcombo, option, textByLine;
-
+var text, client, option, textByLine;
 
 client = new XMLHttpRequest();
 client.open('GET', 'https://marajac.github.io/libscript/options.txt');
@@ -18,10 +16,11 @@ client.onreadystatechange = function() {
 }
 client.send();
 
+var qbox = document.getElementById('qpreselect');
 qbox.addEventListener('click', choiceListener);
 
 function choiceListener() {
-    qboxValue = qbox.value;
+    var qboxValue = qbox.value;
     //laptop/GIFM/Dibs/other tech
     if(qboxValue == 27251 || qboxValue == 27252 || qboxValue == 27249 || qboxValue == 27250 || 
       qboxValue == 27253)
@@ -38,42 +37,42 @@ function choiceListener() {
     else if(qboxValue == 2)
     {
         document.getElementById('q').value = "Reference";
-    	  setFields(1, 1, 1, 1);
+    	setFields(1, 1, 1, 1);
         swapFields();
     }
     //Directional
     else if(qboxValue == 3)
     {
         document.getElementById('q').value = "Directional";
-    	  setFields(2, 1, 1, 1);
+    	setFields(2, 1, 1, 1);
         swapFields();
     }
     //Stacks Transaction
     else if(qboxValue == 4)
     {
         document.getElementById('q').value = "Stacks Transaction";
-    	  setFields(2, 1, 1, 1);
+    	setFields(2, 1, 1, 1);
         swapFields();
     }
     //Difficult Reserve
     if(qboxValue == 5)
     {
         document.getElementById('q').value = "Difficult Reserve";
-    	  setFields(1, 1, 1, 2);
+    	setFields(1, 1, 1, 2);
         swapFields();
     }
     //Phone Directional
     if(qboxValue == 6)
     {
         document.getElementById('q').value = "Phone Directional";
-    	  setFields(2, 2, 1, 1);
+    	setFields(2, 2, 1, 1);
         swapFields();
     }
     //Phone Reserve
     if(qboxValue == 7)
     {
         document.getElementById('q').value = "Phone Reserve";
-    	  setFields(1, 2, 1, 1);
+    	setFields(1, 2, 1, 1);
         swapFields();
     }
     //First Floor
@@ -81,7 +80,7 @@ function choiceListener() {
     else if(qboxValue == 9)
     {
         document.getElementById('q').value = "Directional";
-    	  setFields(2, 1, 2, 1);
+    	setFields(2, 1, 2, 1);
         swapFields();
     }
 }
@@ -94,11 +93,11 @@ function setFields(f1, f2, f3, f4) {
 }
 
 //generate new options
-function createOptions(textByLine){  
-    qcombo = document.getElementById('qpreselect');
-    for(i=0; i < textByLine.length-1; i++){
+function createOptions(optionsList){  
+    var qcombo = document.getElementById('qpreselect');
+    for(i=0; i < optionsList.length-1; i++){
         option = document.createElement('option');
-        option.text = textByLine[i];
+        option.text = optionsList[i];
         option.value = i+1;
         qcombo.appendChild(option);
     }
