@@ -6,6 +6,10 @@ fetchAndGenerateOptions();
 var qbox = document.getElementById('qpreselect');
 qbox.addEventListener('click', choiceListener);
 
+var isCustomField = false;
+var submit = document.getElementById('s-la-ra-submit');
+submit.addEventListener('click', submitListener)
+
 function fetchAndGenerateOptions() {
     var client = new XMLHttpRequest();
     client.open('GET', 'https://marajac.github.io/libscript/options.txt');
@@ -30,6 +34,13 @@ function createOptions(optionsList){
         option.value = i+1;
         qcombo.appendChild(option);
     }
+}
+
+function submitListener() {
+	if(isCustomField){
+		showPreDef();
+		isCustomField = false;
+	}
 }
 
 function choiceListener() {
@@ -107,4 +118,5 @@ function swapFields(){
      * the choiceListener function from incorrectly 
      * activating with the previous value that was set */
     document.getElementById('qpreselect').value = 0;
+	isCustomField = true;
 }
