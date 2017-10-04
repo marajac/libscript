@@ -8,7 +8,7 @@ qbox.addEventListener('click', choiceListener);
 
 var isCustomField = false;
 var submit = document.getElementById('s-la-ra-submit');
-submit.addEventListener('click', submitListener)
+submit.addEventListener('click', submitListener);
 
 function fetchAndGenerateOptions() {
     var client = new XMLHttpRequest();
@@ -48,6 +48,7 @@ function choiceListener() {
         //course reserve
         case 27248:
             setFields(1, 1, 1, 1);
+	    isCustomField = false;
             break;
         //laptop/GIFM/Dibs/other tech       
         case 27249:
@@ -56,6 +57,7 @@ function choiceListener() {
         case 27252:
         case 27253:
             setFields(2, 1, 1, 1);
+	    isCustomField = false;
             break;
         //Second Floor options
         case 2:
